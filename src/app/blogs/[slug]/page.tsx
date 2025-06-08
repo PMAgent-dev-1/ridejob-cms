@@ -13,13 +13,13 @@ import ArticleContent from "@/components/ArticleContent";
 
 export const dynamic = 'force-dynamic';
 
-interface BlogPageProps {
-  params: { slug: string }
-}
-
-export default async function BlogPage({ params }: BlogPageProps) {
-  const { slug } = params
-  const blog = await getBlog(slug)
+export default async function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
+  const blog = await getBlog(slug);
 
   if (!blog) {
     notFound()
