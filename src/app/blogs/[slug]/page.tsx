@@ -25,6 +25,7 @@ export default async function BlogPage({
   params,
 }: {
   params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const { slug } = params;
   const blog = await getBlog(slug);
