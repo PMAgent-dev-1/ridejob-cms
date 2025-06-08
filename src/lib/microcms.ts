@@ -1,5 +1,5 @@
 import { createClient, MicroCMSQueries } from "microcms-js-sdk";
-import type { Blog, Category, Interviewer, Logo } from "@/types/microcms";
+import type { Blog, Category, Interviewer, Logo, Slider } from "@/types/microcms";
 
 const client = createClient({
   serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN!,
@@ -78,6 +78,22 @@ export const getLogos = async (queries?: MicroCMSQueries) => {
     return data;
   } catch (error) {
     console.error("Error fetching logos:", error);
+    return { contents: [], totalCount: 0, limit: 0, offset: 0 };
+  }
+};
+
+export const getSliders = async (queries?: MicroCMSQueries) => {
+  try {
+    const data = await client.getList<Slider>({
+      endpoint: "slider",
+      queries,
+      customRequestInit: {
+        next: { revalidate: 0 },
+      },
+    });
+    return data;
+  } catch (error) {
+    console.error("Error fetching sliders:", error);
     return { contents: [], totalCount: 0, limit: 0, offset: 0 };
   }
 };

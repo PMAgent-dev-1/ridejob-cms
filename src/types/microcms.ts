@@ -56,4 +56,17 @@ export type Logo = {
     height: number;
     width: number;
   };
+};
+
+export type Slider = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  image: {
+    url: string;
+    height: number;
+    width: number;
+  };
 }; 

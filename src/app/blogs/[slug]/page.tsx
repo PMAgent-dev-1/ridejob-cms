@@ -10,6 +10,7 @@ import { notFound } from "next/navigation"
 import { getBlog, getCategories, getBlogs } from "@/lib/microcms"
 import { Header } from "@/components/Header";
 import ArticleContent from "@/components/ArticleContent";
+import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
   const { contents } = await getBlogs();
@@ -229,6 +230,7 @@ export default async function BlogPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { getBlogs, getCategories, getInterviewers, getLogos } from "@/lib/microcms"
+import { getBlogs, getCategories, getInterviewers, getLogos, getSliders } from "@/lib/microcms"
 import { HeroSlider } from "@/components/HeroSlider"
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
@@ -15,10 +15,12 @@ export default async function HomePage() {
   const categoriesData = await getCategories();
   const interviewersData = await getInterviewers();
   const logosData = await getLogos();
+  const slidersData = await getSliders();
   const blogs = blogsData.contents;
   const categories = categoriesData.contents;
   const interviewers = interviewersData.contents;
   const logos = logosData.contents;
+  const sliders = slidersData.contents;
 
   const companyInterviewCategory = categories.find(cat => cat.slug === 'company-interview');
   const companyInterviewBlogsData = companyInterviewCategory
@@ -62,7 +64,7 @@ export default async function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <HeroSlider />
+              <HeroSlider sliders={sliders} />
             </div>
           </div>
         </div>
