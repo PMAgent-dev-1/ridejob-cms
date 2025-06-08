@@ -1,0 +1,130 @@
+.code-style-content h2 {
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 80px;
+}
+
+.code-style-content h2:before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: #3498db;
+}
+
+.code-style-content .conversation {
+  margin: 0px auto;
+}
+
+.code-style-content .chat-box {
+  margin-top: 20px;
+}
+
+.code-style-content .chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.code-style-content .chat-message.right {
+  flex-direction: row-reverse;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.code-style-content .chat-message.left {
+  flex-direction: row;
+}
+
+.code-style-content .avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.code-style-content .avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.code-style-content .name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+  color: #555;
+}
+
+.code-style-content .bubble {
+  max-width: 70%;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  border: 3px solid #3498db;
+}
+
+.code-style-content .chat-message.left .bubble {
+  background-color: #E6F0FA;
+}
+
+.code-style-content .chat-message.right .bubble {
+  background-color: #F2F2F2;
+}
+
+.code-style-content .yellow-underline {
+  background: linear-gradient(to bottom, transparent 60%, #ffeb3b 60%);
+  font-weight: bold;
+}
+
+.code-style-content .section-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-left: 5px solid #8e44ad;
+  padding-left: 10px;
+  color: #333;
+}
+
+.code-style-content .header {
+  background-color: #8e44ad;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .code-style-content h2 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .code-style-content .bubble {
+    max-width: 100%;
+  }
+  
+  .code-style-content .avatar {
+    width: 40px;
+  }
+  
+  .code-style-content .name {
+    font-size: 0.8rem;
+  }
+  
+  .code-style-content .chat-message {
+    flex-wrap: wrap;
+  }
+  
+  .code-style-content .chat-box {
+    margin-top: 10px;
+  }
+} 
