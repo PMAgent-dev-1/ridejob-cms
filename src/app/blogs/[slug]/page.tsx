@@ -13,6 +13,14 @@ import ArticleContent from "@/components/ArticleContent";
 
 export const dynamic = 'force-dynamic';
 
+export async function generateStaticParams() {
+  const { contents } = await getBlogs();
+
+  return contents.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
+
 export default async function BlogPage({
   params,
 }: {
