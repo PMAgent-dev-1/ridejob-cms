@@ -35,10 +35,12 @@ export default async function BlogPage({
   const categories = (await getCategories()).contents;
 
   // Fetch related articles
-  const { contents: relatedArticles } = await getBlogs({
-    filters: `category[equals]${blog.category.id}[and]id[not_equals]${blog.id}`,
-    limit: 3,
-  });
+  const { contents: relatedArticles } = blog.category
+    ? await getBlogs({
+        filters: `category[equals]${blog.category.id}[and]id[not_equals]${blog.id}`,
+        limit: 3,
+      })
+    : { contents: [] };
 
   return (
     <div className="min-h-screen bg-white">
