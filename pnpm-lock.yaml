@@ -20,6 +20,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.3
         version: 1.2.3(@types/react@18.3.23)(react@18.3.1)
+      '@stagewise/toolbar-react':
+        specifier: ^0.4.4
+        version: 0.4.4(@types/react@18.3.23)(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -60,9 +63,6 @@ importers:
       '@stagewise/toolbar':
         specifier: ^0.4.4
         version: 0.4.4
-      '@stagewise/toolbar-next':
-        specifier: ^0.4.4
-        version: 0.4.4(@types/react@18.3.23)(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.8
@@ -431,13 +431,6 @@ packages:
 
   '@rushstack/eslint-patch@1.11.0':
     resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
-
-  '@stagewise/toolbar-next@0.4.4':
-    resolution: {integrity: sha512-picfZefzoKLXbipCsWwPsE/P9p6JDAGoVpB4YUqXoRG290a5wLTswBjLZNN0kJ8vs11LYFoZgtqOlQW8EfuwRA==}
-    peerDependencies:
-      '@types/react': '>=18.0.0'
-      next: '>=14.0.0'
-      react: '>=18.0.0'
 
   '@stagewise/toolbar-react@0.4.4':
     resolution: {integrity: sha512-IRihvvQZ+dsoXge+fJWHp4S+4k9Vt5/1U+ryOUwy8Fsrxe4pASnLWm3fj1V9RZ4wrPzNKbDEISlEZtl8yk3+FA==}
@@ -2289,13 +2282,6 @@ snapshots:
   '@rtsao/scc@1.1.0': {}
 
   '@rushstack/eslint-patch@1.11.0': {}
-
-  '@stagewise/toolbar-next@0.4.4(@types/react@18.3.23)(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@stagewise/toolbar-react': 0.4.4(@types/react@18.3.23)(react@18.3.1)
-      '@types/react': 18.3.23
-      next: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
 
   '@stagewise/toolbar-react@0.4.4(@types/react@18.3.23)(react@18.3.1)':
     dependencies:

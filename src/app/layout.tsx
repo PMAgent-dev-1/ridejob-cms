@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { StagewiseWrapper } from "@/components/StagewiseWrapper";
+import { DevToolbar } from "@/components/DevToolbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         {children}
-        <StagewiseWrapper />
-        <div id="stagewise-root"></div>
+        <DevToolbar />
       </body>
     </html>
   );
