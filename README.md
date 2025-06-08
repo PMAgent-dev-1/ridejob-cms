@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RIDE JOB メディアサイト
 
-## Getting Started
+ドライバー業界の魅力や最新情報を発信するメディアサイトです。
 
-First, run the development server:
+## 概要
+
+このプロジェクトは、Next.js (App Router) を使用して構築された、ドライバー業界に特化したメディアサイトのフロントエンドです。
+ヘッドレスCMSであるmicroCMSと連携し、記事やスライダーなどのコンテンツを管理しています。
+
+## ✨ 技術スタック
+
+- **フレームワーク**: [Next.js](https://nextjs.org/) 14 (App Router)
+- **言語**: [TypeScript](https://www.typescriptlang.org/)
+- **スタイリング**: [Tailwind CSS](https://tailwindcss.com/) v4
+- **ヘッドレスCMS**: [microCMS](https://microcms.io/)
+- **UIコンポーネント**: [shadcn/ui](https://ui.shadcn.com/), [Radix UI](https://www.radix-ui.com/), [Lucide React](https://lucide.dev/)
+- **カルーセル**: [Embla Carousel](https://www.embla-carousel.com/)
+
+## 🚀 環境構築
+
+### 1. リポジトリをクローン
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Kei5665/ridejob-cms.git
+cd ridejob-cms
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. パッケージをインストール
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+このプロジェクトでは `pnpm` を使用します。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+```
 
-## Learn More
+### 3. 環境変数を設定
 
-To learn more about Next.js, take a look at the following resources:
+プロジェクトのルートに `.env.local` ファイルを作成し、以下の内容を記述してください。
+値はご自身のmicroCMS環境に合わせて設定してください。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```.env.local
+MICROCMS_SERVICE_DOMAIN="YOUR_SERVICE_DOMAIN"
+MICROCMS_API_KEY="YOUR_API_KEY"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 開発
 
-## Deploy on Vercel
+以下のコマンドを実行すると、開発サーバーが起動します。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開くと、サイトを確認できます。
+
+## ☁️ デプロイ
+
+このアプリケーションは、[Vercel](https://vercel.com/) へのデプロイが推奨されています。
+リポジトリをVercelアカウントに連携し、環境変数を設定するだけで簡単にデプロイできます。
