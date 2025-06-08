@@ -11,8 +11,6 @@ import { getBlog, getCategories, getBlogs } from "@/lib/microcms"
 import { Header } from "@/components/Header";
 import ArticleContent from "@/components/ArticleContent";
 
-export const dynamic = 'force-dynamic';
-
 export async function generateStaticParams() {
   const { contents } = await getBlogs();
 
