@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -13,14 +12,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/ssw/:path*',
-        destination: 'https://your-ssw-app-deployment-url.vercel.app/ssw/:path*',
-      },
-    ]
-  }
 };
 
 export default nextConfig;
