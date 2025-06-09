@@ -3,13 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Header />
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold text-center mb-2">お問い合わせ</h1>
