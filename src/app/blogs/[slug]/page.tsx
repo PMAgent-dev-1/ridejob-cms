@@ -8,9 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { notFound } from "next/navigation"
 import { getBlog, getCategories, getBlogs } from "@/lib/microcms"
-import { Header } from "@/components/Header";
 import ArticleContent from "@/components/ArticleContent";
-import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
   const { contents } = await getBlogs();
@@ -45,9 +43,6 @@ export default async function BlogPage({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <Header />
-
       {/* Hero Image */}
       <div className="h-32 bg-gradient-to-r from-gray-800 to-gray-600 relative overflow-hidden">
         <Image
@@ -230,7 +225,6 @@ export default async function BlogPage({
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

@@ -7,8 +7,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { notFound } from "next/navigation"
 import { getCategory, getBlogs, getCategories } from "@/lib/microcms"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
 
 interface CategoryPageProps {
   params: { slug: string }
@@ -29,8 +27,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       {/* Hero Image */}
       <div className="h-32 bg-gradient-to-r from-gray-800 to-gray-600 relative overflow-hidden">
         <Image
@@ -156,7 +152,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

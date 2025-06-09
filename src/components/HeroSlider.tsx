@@ -17,13 +17,12 @@ export function HeroSlider({ sliders }: Props) {
     return (
       <div className="embla">
         <div className="embla__container">
-          <div className="embla__slide">
+          <div className="embla__slide relative aspect-square">
             <Image
               src="https://picsum.photos/seed/ridejob-fallback/600/400"
               alt="Fallback Image"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg"
+              fill
+              className="rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>
@@ -35,13 +34,12 @@ export function HeroSlider({ sliders }: Props) {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {sliders.map((slider) => (
-          <div className="embla__slide" key={slider.id}>
+          <div className="embla__slide relative aspect-square" key={slider.id}>
             <Image
               src={slider.image.url}
               alt={slider.id}
-              width={slider.image.width}
-              height={slider.image.height}
-              className="rounded-lg shadow-lg"
+              fill
+              className="rounded-lg shadow-lg object-cover"
             />
           </div>
         ))}

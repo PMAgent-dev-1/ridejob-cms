@@ -7,8 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { getBlogs, getCategories, getInterviewers, getLogos, getSliders } from "@/lib/microcms"
 import { HeroSlider } from "@/components/HeroSlider"
-import { Footer } from "@/components/Footer"
-import { Header } from "@/components/Header"
+import { LogoSlider } from "@/components/LogoSlider"
 
 export default async function HomePage() {
   const blogsData = await getBlogs({ limit: 3, orders: "-publishedAt" });
@@ -34,8 +33,6 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-50 to-white py-16">
         <div className="container mx-auto px-4">
@@ -73,18 +70,7 @@ export default async function HomePage() {
       {/* Sponsors */}
       <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center items-center space-x-12 opacity-60 flex-wrap">
-            {logos.map((logo) => (
-              <Image
-                key={logo.id}
-                src={logo.logo.url}
-                alt={logo.company}
-                width={100}
-                height={40}
-                className="object-contain"
-              />
-            ))}
-          </div>
+          <LogoSlider logos={logos} />
         </div>
       </section>
 
@@ -100,7 +86,7 @@ export default async function HomePage() {
                   企業取材
                 </h2>
                 <Link href="/category/company-interview">
-                <Badge variant="secondary" className="bg-blue-100 text-blue-600">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-600 px-4 py-2 text-sm">
                   All Articles
                 </Badge>
                 </Link>
@@ -155,7 +141,7 @@ export default async function HomePage() {
                   最新記事
                 </h2>
                 <Link href="/blogs">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-600">
+                  <Badge variant="secondary" className="bg-blue-100 text-blue-600 px-4 py-2 text-sm">
                     All Articles
                   </Badge>
                 </Link>
@@ -303,7 +289,6 @@ export default async function HomePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

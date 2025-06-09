@@ -1,13 +1,8 @@
-"use client"
-
 import Image from "next/image"
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Header />
       <main className="flex-grow">
       {/* Hero Section */}
         <div className="relative h-64 bg-gray-800">
@@ -39,7 +34,6 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
