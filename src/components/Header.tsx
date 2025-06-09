@@ -20,6 +20,9 @@ export function Header() {
               <Link href="/blogs" className="text-sm text-gray-600 hover:text-blue-600">
                 最新記事
               </Link>
+              <Link href="https://ridejob-cms.online/ssw" className="text-sm text-gray-600 hover:text-blue-600">
+                特定技能外国人
+              </Link>
             </nav>
           </div>
           <Link href="/contact">
