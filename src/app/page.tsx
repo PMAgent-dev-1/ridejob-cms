@@ -10,7 +10,7 @@ import { HeroSlider } from "@/components/HeroSlider"
 import { LogoSlider } from "@/components/LogoSlider"
 
 export default async function HomePage() {
-  const blogsData = await getBlogs({ limit: 3, orders: "-publishedAt" });
+  const blogsData = await getBlogs({ limit: 6, orders: "-publishedAt" });
   const categoriesData = await getCategories();
   const interviewersData = await getInterviewers();
   const logosData = await getLogos();
@@ -24,7 +24,7 @@ export default async function HomePage() {
   const companyInterviewCategory = categories.find(cat => cat.slug === 'company-interview');
   const companyInterviewBlogsData = companyInterviewCategory
     ? await getBlogs({
-        limit: 3,
+        limit: 5,
         filters: `category[equals]${companyInterviewCategory.id}`,
         orders: "-publishedAt",
       })
