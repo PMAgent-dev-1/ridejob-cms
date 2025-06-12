@@ -58,7 +58,7 @@ export function Header({ categories }: { categories: Category[] }) {
             <div className="flex items-center space-x-6">
               <nav className="flex items-center space-x-6">
                 {navLinks.map((link) => (
-                  <Link key={link.id} href={link.href} className="text-sm text-gray-600 hover:text-blue-600 whitespace-nowrap">
+                  <Link key={link.id} href={link.href} className="text-sm font-semibold text-gray-700 hover:text-blue-600 whitespace-nowrap">
                     {link.label}
                   </Link>
                 ))}
