@@ -3,8 +3,12 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { getCategories } from "@/lib/microcms";
 
-export function Footer() {
+export async function Footer() {
+  const categoriesData = await getCategories();
+  const categories = categoriesData.contents;
+
   return (
     <>
       {/* CTA Section */}
@@ -50,19 +54,21 @@ export function Footer() {
             <div>
               <h4 className="font-bold mb-3">CATEGORIES</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="#" className="hover:text-blue-600">モビリティートレンド</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">企業取材</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">ご利用者様の声</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">お役立ち情報</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">インタビュー</Link></li>
+                {categories.map((cat) => (
+                  <li key={cat.id}>
+                    <Link href={`/category/${cat.slug}`} className="hover:text-blue-600">
+                      {cat.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-3">LEGAL</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><Link href="#" className="hover:text-blue-600">運営会社</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">プライバシーポリシー</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">お問い合わせ</Link></li>
+                <li><Link href="https://pmagent.jp/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">運営会社</Link></li>
+                <li><Link href="/privacy" className="hover:text-blue-600">プライバシーポリシー</Link></li>
+                <li><Link href="/contact" className="hover:text-blue-600">お問い合わせ</Link></li>
               </ul>
             </div>
             <div>
