@@ -63,6 +63,10 @@ export function Header({ categories }: { categories: Category[] }) {
                   </Link>
                 ))}
               </nav>
+            </div>
+          )}
+          {isLargeScreen && (
+            <div className="flex items-center space-x-6">
               <Link href="/contact" className="ml-4">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6">
                   お問い合わせ

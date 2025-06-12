@@ -53,7 +53,7 @@ export default async function BlogsPage() {
                   ? `/blogs/special/${blog.slug}`
                   : `/blogs/${blog.slug}`;
                 return (
-                  <Card key={blog.id} className="overflow-hidden">
+                  <Card key={blog.id} className="overflow-hidden pt-0">
                     <Link href={blogUrl}>
                       <Image
                         src={blog.eyecatch?.url ?? "/placeholder.svg?height=200&width=300"}
@@ -107,31 +107,18 @@ export default async function BlogsPage() {
               </div>
             </Card>
 
-            {/* Advertisement */}
+            {/* Banner */}
             <Card className="p-0 overflow-hidden">
-              <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-6 text-center">
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
-                  タクシー業界に
-                  <br />
-                  ご興味のある方へ
-                </h3>
-                <Image
-                  src="/placeholder.svg?height=80&width=80"
-                  alt="Professional"
-                  width={80}
-                  height={80}
-                  className="rounded-full mx-auto mb-4"
-                />
-                <Button className="bg-red-600 hover:bg-red-700 text-white w-full mb-2">一度相談してみる【無料】</Button>
-              </div>
-              <div className="bg-white p-4 text-center">
-                <div className="text-2xl font-bold text-red-600 mb-2">RIDE JOB</div>
-                <p className="text-sm text-gray-600">
-                  業界未経験者歓迎
-                  <br />
-                  充実した研修制度
-                </p>
-              </div>
+              <Link href="https://ridejob.pmagent.jp/" target="_blank" rel="noopener noreferrer">
+                <Image src="/form.jpg" alt="RIDE JOB 応募バナー" width={600} height={300} className="w-full h-auto" />
+              </Link>
+            </Card>
+
+            {/* SSW Banner */}
+            <Card className="p-0 overflow-hidden">
+              <Link href="https://ssw.ridejob.jp/ssw" target="_blank" rel="noopener noreferrer">
+                <Image src="/ssw.png" alt="SSW サービスバナー" width={600} height={300} className="w-full h-auto" />
+              </Link>
             </Card>
           </div>
         </div>

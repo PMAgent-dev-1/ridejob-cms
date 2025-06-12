@@ -91,7 +91,7 @@ export default async function BlogPage({
                 <h1 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">{blog.title}</h1>
 
                 {blog.eyecatch && (
-                  <div className="relative w-full h-96 mb-8">
+                  <div className="relative w-full min-h-[400px] mb-8">
                     <Image
                       src={blog.eyecatch.url}
                       alt={blog.title}
@@ -112,7 +112,7 @@ export default async function BlogPage({
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">関連記事</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   {relatedArticles.map((relatedArticle) => (
-                    <Card key={relatedArticle.id}>
+                    <Card key={relatedArticle.id} className="overflow-hidden pt-0">
                       <Link href={`/blogs/${relatedArticle.slug}`}>
                         {relatedArticle.eyecatch ? (
                         <Image

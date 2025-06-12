@@ -94,7 +94,7 @@ export default async function HomePage() {
               {companyInterviewBlogs.length > 0 && (
               <div className="grid md:grid-cols-2 gap-6">
                   <Link href={`/blogs/${companyInterviewBlogs[0].slug}`}>
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden pt-0">
                   <Image
                         src={companyInterviewBlogs[0].eyecatch?.url ?? "/placeholder.svg?height=200&width=300"}
                         alt={companyInterviewBlogs[0].title}
@@ -149,7 +149,7 @@ export default async function HomePage() {
               <div className="grid md:grid-cols-3 gap-6">
                 {blogs.map((blog) => {
                   return (
-                  <Card key={blog.id} className="overflow-hidden">
+                  <Card key={blog.id} className="overflow-hidden pt-0">
                       <Link href={`/blogs/${blog.slug}`}>
                       <Image
                         src={blog.eyecatch?.url ?? "/placeholder.svg?height=150&width=250"}
@@ -263,28 +263,18 @@ export default async function HomePage() {
               </div>
             </Card>
 
-            {/* Advertisement */}
-            <Card className="p-4 bg-gradient-to-br from-orange-400 to-orange-600 text-white">
-              <div className="text-center">
-                <h3 className="font-bold mb-2">タクシー業界で</h3>
-                <h3 className="font-bold mb-4">ご活躍されたい方へ</h3>
-                <Image
-                  src="/placeholder.svg?height=80&width=80"
-                  alt="Professional"
-                  width={80}
-                  height={80}
-                  className="rounded-full mx-auto mb-4"
-                />
-                <Button variant="secondary" className="w-full">
-                  RIDE JOB
-                </Button>
-                <p className="text-xs mt-2 opacity-90">for SSW</p>
-                <p className="text-xs opacity-75">
-                  業界未経験者歓迎
-                  <br />
-                  充実した研修制度
-                </p>
-              </div>
+            {/* Banner */}
+            <Card className="p-0 overflow-hidden">
+              <Link href="https://ridejob.pmagent.jp/" target="_blank" rel="noopener noreferrer">
+                <Image src="/form.jpg" alt="RIDE JOB 応募バナー" width={600} height={300} className="w-full h-auto" />
+              </Link>
+            </Card>
+
+            {/* SSW Banner */}
+            <Card className="p-0 overflow-hidden">
+              <Link href="https://ssw.ridejob.jp/ssw" target="_blank" rel="noopener noreferrer">
+                <Image src="/ssw.png" alt="SSW サービスバナー" width={600} height={300} className="w-full h-auto" />
+              </Link>
             </Card>
           </div>
         </div>

@@ -38,9 +38,12 @@ export function Footer() {
       <footer className="bg-white border-t">
         <div className="container mx-auto px-4 py-8">
           <div className="grid md:grid-cols-4 gap-8 text-sm">
-            <div>
-              <h4 className="font-bold mb-3">RIDE JOB</h4>
-              <p className="text-gray-600">
+            <div className="space-y-2">
+              <Link href="/">
+                <Image src="/logo.png" alt="RIDE JOB" width={160} height={48} className="h-12 w-auto" />
+              </Link>
+              <p className="text-xs text-blue-600 font-bold">ライドジョブ</p>
+              <p className="text-gray-600 text-sm">
                 ドライバー業界の魅力発信メディア
               </p>
             </div>

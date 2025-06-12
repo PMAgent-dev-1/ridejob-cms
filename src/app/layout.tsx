@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
-import { DevToolbar } from "@/components/DevToolbar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getCategories } from "@/lib/microcms";
+import StagewiseToolbarLoader from "@/components/StagewiseToolbarLoader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,9 +22,9 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Header categories={categories} />
+        <StagewiseToolbarLoader />
         {children}
         <Footer />
-        <DevToolbar />
       </body>
     </html>
   );
