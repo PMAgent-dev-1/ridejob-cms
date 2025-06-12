@@ -1,22 +1,53 @@
 import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-grow">
-      {/* Hero Section */}
-        <div className="relative h-64 bg-gray-800">
+        {/* Hero Section */}
+        <section className="relative w-full h-[500px] overflow-hidden">
+          {/* Sky background */}
           <Image
-            src="https://picsum.photos/seed/ridejob-about/1200/400"
-            alt="About us"
-            width={1200}
-            height={400}
-            className="w-full h-full object-cover opacity-50"
+            src="https://picsum.photos/seed/sky/1600/500"
+            alt="Blue sky background"
+            fill
+            priority
+            className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white">RIDE JOBについて</h1>
+
+          {/* Foreground contents */}
+          <div className="container mx-auto px-4 h-full flex flex-col justify-center">
+            <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-2xl">
+              未経験でも年収600万円以上可能
+            </h1>
+            <p className="text-white text-xl md:text-3xl font-bold mb-8 max-w-2xl">
+              あなたに最適なタクシー会社が必ず見つかる！！
+            </p>
+            <Link href="https://ridejob.pmagent.jp/" target="_blank" rel="noopener noreferrer" className="w-fit">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-xl rounded-full">
+                無料相談はこちら
+              </Button>
+            </Link>
           </div>
-        </div>
+
+          {/* Decorative foreground (cars & person) */}
+          <Image
+            src="https://picsum.photos/seed/cars/600/200"
+            alt="Taxi cars"
+            width={600}
+            height={200}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-40 md:h-56"
+          />
+          <Image
+            src="https://picsum.photos/seed/person/400/500"
+            alt="Presenter"
+            width={400}
+            height={500}
+            className="absolute bottom-0 right-10 hidden md:block w-auto h-96"
+          />
+        </section>
         
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
