@@ -43,13 +43,14 @@ export function Header({ categories }: { categories: Category[] }) {
             <div>
               <Image
                 src="/logo.png"
-                alt="RIDE JOB"
+                alt="らいどじょぶ ロゴ"
+                aria-label="らいどじょぶ ロゴ"
                 width={160}
                 height={48}
                 priority
                 className="h-12 w-auto"
               />
-              <p className="text-xs text-blue-600 text-center font-bold">ライドジョブ</p>
+              <p className="text-xs text-blue-600 text-center font-bold">らいどじょぶ</p>
             </div>
           </Link>
 
