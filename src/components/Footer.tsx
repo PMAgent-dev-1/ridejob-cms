@@ -44,9 +44,16 @@ export async function Footer() {
           <div className="grid md:grid-cols-4 gap-8 text-sm">
             <div className="space-y-2">
               <Link href="/">
-                <Image src="/logo.png" alt="RIDE JOB" width={160} height={48} className="h-12 w-auto" />
+                <Image
+                  src="/logo.png"
+                  alt="らいどじょぶ ロゴ"
+                  aria-label="らいどじょぶ ロゴ"
+                  width={160}
+                  height={48}
+                  className="h-12 w-auto"
+                />
               </Link>
-              <p className="text-xs text-blue-600 font-bold">ライドジョブ</p>
+              <p className="text-xs text-blue-600 font-bold">らいどじょぶ</p>
               <p className="text-gray-600 text-sm">
                 ドライバー業界の魅力発信メディア
               </p>
