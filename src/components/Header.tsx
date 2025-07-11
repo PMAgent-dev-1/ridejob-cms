@@ -32,7 +32,7 @@ export function Header({ categories }: { categories: Category[] }) {
       id: category.id,
     })),
     { href: "/about", label: "RIDE JOBについて", id: "about" },
-    { href: "https://ridejob-cms.online/ssw", label: "SSW", id: "ssw" },
+    { href: "https://ridejob.jp/ssw", label: "SSW", id: "ssw" },
   ];
 
   return (
