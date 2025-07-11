@@ -42,7 +42,7 @@ export function Header({ categories }: { categories: Category[] }) {
           <Link href="/">
             <div>
               <Image
-                src="/logo.png"
+                src="/media/logo.png"
                 alt="RIDE JOB"
                 width={160}
                 height={48}

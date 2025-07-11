@@ -266,14 +266,14 @@ export default async function HomePage() {
             {/* Banner */}
             <Card className="p-0 overflow-hidden">
               <Link href="https://ridejob.pmagent.jp/" target="_blank" rel="noopener noreferrer">
-                <Image src="/form.jpg" alt="RIDE JOB 応募バナー" width={600} height={300} className="w-full h-auto" />
+                <Image src="/media/form.jpg" alt="RIDE JOB 応募バナー" width={600} height={300} className="w-full h-auto" />
               </Link>
             </Card>
 
             {/* SSW Banner */}
             <Card className="p-0 overflow-hidden">
               <Link href="https://ssw.ridejob.jp/ssw" target="_blank" rel="noopener noreferrer">
-                <Image src="/ssw.png" alt="SSW サービスバナー" width={600} height={300} className="w-full h-auto" />
+                <Image src="/media/ssw.png" alt="SSW サービスバナー" width={600} height={300} className="w-full h-auto" />
               </Link>
             </Card>
           </div>
