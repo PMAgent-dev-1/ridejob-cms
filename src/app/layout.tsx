@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/OGP.png", // public ディレクトリに配置した OGP 画像（大文字）
+        url: "/media/OGP.png", // public ディレクトリに配置した OGP 画像（大文字）
         width: 1200,
         height: 630,
         alt: "RIDE JOB Media",
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
       "RIDE JOB Mediaは、タクシー業界への転職を考えている方やライドシェアに興味がある方に向けて、業界の最新情報や働き方、収入、制度の変化をご紹介するメディアです。",
     images: [
       {
-        url: "/OGP.png",
+        url: "/media/OGP.png",
         alt: "RIDE JOB Media",
       },
     ],
   },
   icons: {
-    icon: "/@favicon.png",
-    shortcut: "/@favicon.png",
-    apple: "/@favicon.png",
+    icon: "/media/favicon.png",
+    shortcut: "/media/favicon.png",
+    apple: "/media/favicon.png",
   },
 };
 
